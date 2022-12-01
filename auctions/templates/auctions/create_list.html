@@ -1,0 +1,65 @@
+{% extends "auctions/layout.html" %} {% block body %}
+<h2>Create List</h2>
+<div class="container">
+  <form class="row g-3" method="post">
+    {% csrf_token %}
+    <div class="col-6">
+      <label for="inputEmail4" class="form-label">Title</label>
+      <input type="text" class="form-control" name="title" />
+    </div>
+    <div class="col-12 mt-3">
+      <label for="description" class="form-label"
+        >Description</label
+      >
+      <br />
+      <textarea name="description" rows="5" cols="50"></textarea>
+    </div>
+    <div class="col-4">
+      <label for="bid">Starting Bid</label>
+      <br />
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <input
+          type="text"
+          name="starting_bid"
+          class="form-control"
+          aria-label="Amount (to the nearest dollar)"
+        />
+      </div>
+    </div>
+
+    <div class="col-8">
+      <label for="inputEmail4" class="form-label">URL</label>
+      <input name="url" type="text" class="form-control" />
+    </div>
+
+    <div class="col-md-4 mt-3">
+      <label for="inputState" class="form-label">Category</label>
+      <select
+        name="category"
+        id="inputState"
+        class="form-select"
+      >
+        <option selected>Choose...</option>
+        <option>Electronics</option>
+        <option>Collectibles & Art</option>
+        <option>Clothing & Accessories</option>
+        <option>Home & Garden</option>
+        <option>Jewelry & Watches</option>
+        <option>Sporting Goods</option>
+        <option>Motors</option>
+        <option>Fashion</option>
+        <option>Toys</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="col-12 mt-3">
+      <button type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

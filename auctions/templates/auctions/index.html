@@ -1,0 +1,20 @@
+{% extends "auctions/layout.html" %} {% block body %}
+<h2>Active Listings</h2>
+
+<div id="ecommerce_grid" class="container">
+  {% for auction in auctions %}
+  <a href="{% url 'listing_page' auction.id %}">
+    <div class="row">
+      <div class="col">
+        <img src="{{ auction.url }}" />
+        <h1>${{auction.starting_bid}}</h1>
+        <h4>{{ auction.title }}</h4>
+        <p>{{ auction.description }}</p>
+        <p>{{ auction.category }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}

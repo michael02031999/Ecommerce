@@ -1,0 +1,94 @@
+body {
+  padding: 10px;
+}
+
+/* Layout */
+
+#count {
+  background-color: gray;
+  border-radius: 25px;
+  color: white;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+/* Active Listing */
+
+#ecommerce_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  text-align: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+#ecommerce_grid img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.col {
+  margin-bottom: 25px !important;
+  border: 2.5px solid black;
+  padding: 25px;
+}
+
+.col * {
+  margin-bottom: 15px;
+}
+
+/* Listing Page */
+
+#listing_page_container {
+  padding: 25px;
+}
+
+#listing_page_image {
+  padding: 20px;
+  height: 300px;
+}
+
+#bid {
+  font-size: 30px !important;
+}
+
+#description {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#add,
+#remove {
+  color: white !important;
+}
+
+input::outer-spin-button,
+input::inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Watchlist*/
+
+#watchlist_container {
+  margin-bottom: 15px;
+  gap: 25px;
+}
+
+#contents p {
+  margin: 0px;
+}
+
+#watchlist_image {
+  width: 150px;
+}
+
+#watchlist_price {
+  margin-bottom: 0px;
+}
+
+#watchlist_description {
+  font-size: 10px;
+}
